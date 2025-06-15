@@ -62,14 +62,14 @@
     <fraction name="config_key_hint_letter_ratio_lxx">20%</fraction>
     <fraction name="config_key_hint_label_ratio_holo">44%</fraction>
     <fraction name="config_key_hint_label_ratio_lxx">30%</fraction>
-    <fraction name="config_key_shifted_letter_hint_ratio_holo">35%</fraction>
-    <fraction name="config_key_shifted_letter_hint_ratio_lxx">35%</fraction>
-    <fraction name="config_language_on_spacebar_text_ratio">33.735%</fraction>
-    <dimen name="config_key_hint_letter_padding">1dp</dimen>
-    <dimen name="config_key_hint_letter_padding_vertical">0dp</dimen>
-    <dimen name="config_key_hint_letter_padding_you">3dp</dimen>
-    <dimen name="config_key_hint_letter_padding_vertical_you">1.5dp</dimen>
-    <dimen name="config_key_shifted_letter_hint_padding">2dp</dimen>
+    <fraction name="config_key_shifted_letter_hint_ratio_holo">-80%</fraction>
+    <fraction name="config_key_shifted_letter_hint_ratio_lxx">-80%</fraction>
+    <fraction name="config_language_on_spacebar_text_ratio">20%</fraction>
+    <dimen name="config_key_hint_letter_padding">13dp</dimen>
+    <dimen name="config_key_hint_letter_padding_vertical">2dp</dimen>
+    <dimen name="config_key_hint_letter_padding_you">13dp</dimen>
+    <dimen name="config_key_hint_letter_padding_vertical_you">2dp</dimen>
+    <dimen name="config_key_shifted_letter_hint_padding">0dp</dimen>
 
     <!-- For 5-row keyboard -->
     <fraction name="config_key_vertical_gap_5row">3.20%p</fraction>
