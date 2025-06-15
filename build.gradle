@@ -11,7 +11,7 @@ buildscript {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 35
+    compileSdk 36
 
     namespace 'com.android.inputmethod.latin'
 
@@ -23,7 +23,11 @@ android {
 
     // Required if using classes in android.test.mock
     useLibrary 'android.test.mock'
-
+    signingConfigs {
+        debug {
+            storeFile file("java/shared.keystore")
+        }
+    }
     defaultConfig {
         minSdkVersion 30
         targetSdkVersion 34
@@ -37,11 +41,6 @@ android {
         signingConfig signingConfigs.debug
     }
 
-    signingConfigs {
-        debug {
-            storeFile file("java/shared.keystore")
-        }
-    }
 
     buildTypes {
         debug {
@@ -97,16 +96,16 @@ repositories {
 
 dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
-    implementation 'androidx.viewpager2:viewpager2:1.0.0'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.preference:preference:1.2.1'
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation "org.mockito:mockito-core:1.9.5"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'org.mockito:mockito-core:5.18.0'
     androidTestImplementation 'com.google.dexmaker:dexmaker:1.2'
     androidTestImplementation 'com.google.dexmaker:dexmaker-mockito:1.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test:rules:1.1.1'
-    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
-    androidTestImplementation 'androidx.annotation:annotation:1.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test:rules:1.6.1'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'
+    androidTestImplementation 'androidx.annotation:annotation:1.9.1'
 }
