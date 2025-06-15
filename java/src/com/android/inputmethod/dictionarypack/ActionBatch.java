@@ -487,11 +487,11 @@ public final class ActionBatch {
      * An action that sets the word list for deletion as soon as possible.
      *
      * This is triggered when the user requests deletion of a word list. This will mark it as
-     * deleted in the database, and fire an intent for Android Keyboard to take notice and
+     * deleted in the database, and fire an intent for AnBoard to take notice and
      * reload its dictionaries right away if it is up. If it is not up now, then it will
      * delete the actual file the next time it gets up.
      * A file marked as deleted causes the content provider to supply a zero-sized file to
-     * Android Keyboard, which will overwrite any existing file and provide no words for this
+     * AnBoard, which will overwrite any existing file and provide no words for this
      * word list. This is not exactly a "deletion", since there is an actual file which takes up
      * a few bytes on the disk, but this allows to override a default dictionary with an empty
      * dictionary. This way, there is no need for the user to make a distinction between

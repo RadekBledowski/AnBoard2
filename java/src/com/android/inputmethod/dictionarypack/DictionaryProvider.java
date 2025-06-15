@@ -307,7 +307,7 @@ public final class DictionaryProvider extends ContentProvider {
             final int status = wordList.getAsInteger(MetadataDbHelper.STATUS_COLUMN);
             if (MetadataDbHelper.STATUS_DELETING == status) {
                 // This will return an empty file (R.raw.empty points at an empty dictionary)
-                // This is how we "delete" the files. It allows Android Keyboard to fake deleting
+                // This is how we "delete" the files. It allows AnBoard to fake deleting
                 // a default dictionary - which is actually in its assets and can't be really
                 // deleted.
                 final AssetFileDescriptor afd = getContext().getResources().openRawResourceFd(
@@ -398,7 +398,7 @@ public final class DictionaryProvider extends ContentProvider {
                         // If the file does not exist, it has been deleted and the IME should
                         // already have it. Do not return it. However, this only applies if the
                         // word list is INSTALLED, for if it is DELETING we should return it always
-                        // so that Android Keyboard can perform the actual deletion.
+                        // so that AnBoard can perform the actual deletion.
                         final File f = getContext().getFileStreamPath(wordListLocalFilename);
                         if (!f.isFile()) {
                             continue;

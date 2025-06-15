@@ -629,7 +629,7 @@ public class MetadataDbHelper extends SQLiteOpenHelper {
     /**
      * Gets the info about an installed OR deleting word list with a specified id.
      *
-     * Basically, this is the word list that we want to return to Android Keyboard when
+     * Basically, this is the word list that we want to return to AnBoard when
      * it asks for a specific id.
      *
      * @param db the database to get the information from.

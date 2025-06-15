@@ -390,7 +390,7 @@ public class DictionaryInfoUtils {
     /**
      * Returns the id associated with the main word list for a specified locale.
      *
-     * Word lists stored in Android Keyboard's resources are referred to as the "main"
+     * Word lists stored in AnBoard's resources are referred to as the "main"
      * word lists. Since they can be updated like any other list, we need to assign a
      * unique ID to them. This ID is just the name of the language (locale-wise) they
      * are for, and this method returns this ID.

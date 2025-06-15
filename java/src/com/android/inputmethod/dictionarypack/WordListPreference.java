@@ -114,7 +114,7 @@ public final class WordListPreference extends Preference {
         switch (status) {
         // If we are deleting the word list, for the user it's like it's already deleted.
         // It should be reinstallable. Exposing to the user the whole complexity of
-        // the delayed deletion process between the dictionary pack and Android Keyboard
+        // the delayed deletion process between the dictionary pack and AnBoard
         // would only be confusing.
         case MetadataDbHelper.STATUS_DELETING:
         case MetadataDbHelper.STATUS_AVAILABLE:
@@ -191,7 +191,7 @@ public final class WordListPreference extends Preference {
             setStatus(MetadataDbHelper.STATUS_DOWNLOADING);
         } else if (MetadataDbHelper.STATUS_DISABLED == mStatus
                 || MetadataDbHelper.STATUS_DELETING == mStatus) {
-            // If the status is DELETING, it means Android Keyboard
+            // If the status is DELETING, it means AnBoard
             // has not deleted the word list yet, so we can safely
             // turn it to 'installed'. The status DISABLED is still supported internally to
             // avoid breaking older installations and all but there should not be a way to

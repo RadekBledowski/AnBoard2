@@ -561,7 +561,7 @@ public final class UpdateHandler {
     }
 
     /**
-     * Warn Android Keyboard that the state of dictionaries changed and it should refresh its data.
+     * Warn AnBoard that the state of dictionaries changed and it should refresh its data.
      */
     private static void signalNewDictionaryState(final Context context) {
         // TODO: Also provide the locale of the updated dictionary so that the LatinIme
@@ -782,7 +782,7 @@ public final class UpdateHandler {
                 // Pass false to ForgetAction: this may be installed and we still want to apply
                 // a forget-like action (remove the URL) if it is, so we want to turn off the
                 // status == AVAILABLE check. If it's DELETING, this is the right thing to do,
-                // as we want to leave the record as long as Android Keyboard has not deleted it ;
+                // as we want to leave the record as long as AnBoard has not deleted it ;
                 // the record will be removed when the file is actually deleted.
                 actions.add(new ActionBatch.ForgetAction(clientId, currentInfo, false));
             } else {
@@ -809,7 +809,7 @@ public final class UpdateHandler {
                         // Pass true to ForgetAction: this is indeed an update to a non-installed
                         // word list, so activate status == AVAILABLE check
                         // In case the status is DELETING, this is the right thing to do. It will
-                        // leave the entry as DELETING and remove its URL so that Android Keyboard
+                        // leave the entry as DELETING and remove its URL so that AnBoard
                         // can delete it the next time it starts up.
                         actions.add(new ActionBatch.ForgetAction(clientId, currentInfo, true));
                     }
@@ -994,7 +994,7 @@ public final class UpdateHandler {
     /**
      * Marks the word list with the passed id as deleting.
      *
-     * This basically means that on the next chance there is (right away if Android Keyboard
+     * This basically means that on the next chance there is (right away if AnBoard
      * happens to be up, or the next time it gets up otherwise) the dictionary pack will
      * supply an empty dictionary to it that will replace whatever dictionary is installed.
      * This allows to release the space taken by a dictionary (except for the few bytes the
